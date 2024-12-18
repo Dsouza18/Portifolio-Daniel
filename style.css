@@ -31,11 +31,10 @@ header {
 
 nav {
     display: flex;
-    justify-content: center; /* Centraliza os itens dentro do nav */
+    justify-content: center; 
     align-items: center;
-    gap: 1rem;
     padding: 0.5rem;
-    position: relative; /* Para permitir o posicionamento do botão à direita */
+    position: relative; 
 }
 
 nav a {
@@ -50,10 +49,9 @@ nav a:hover {
     color: #fff;
 }
 
-/* Botão "Meu Currículo!" */
 header nav .btn-curriculo {
-    position: relative; /* Posiciona o botão no canto direito */
-    right: 0; /* Coloca o botão no canto direito */
+    position: relative; 
+    right: 0; 
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -74,12 +72,12 @@ header nav .btn-curriculo {
     transition: 0.5s;
 }
 
-/* Efeito ao passar o mouse */
+
 header nav .btn-curriculo:hover {
     color: #00abf0;
 }
 
-/* Efeito visual com pseudo-elemento */
+
 header nav .btn-curriculo::before {
     content: '';
     position: absolute;
@@ -126,6 +124,13 @@ section::before {
     opacity: 0.2;
     pointer-events: none; 
 }
+
+section h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 @keyframes move {
     from {
@@ -194,6 +199,7 @@ section::before {
     flex-wrap: wrap;
     gap: 1rem;
 }
+
 
 .projects article {
     flex: 1 1 calc(50% - 1rem);
