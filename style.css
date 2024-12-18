@@ -1,0 +1,289 @@
+@media (max-width: 768px) {
+    .skills div {
+        flex: 1 1 100%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    scroll-behavior: smooth;
+    background: linear-gradient(135deg, #a4b2c2, #c3ddf8);
+
+}
+
+header {
+    background: rgba(0, 123, 255, 0.8);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.5);
+    margin-bottom: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Centraliza os itens dentro do nav */
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    position: relative; /* Para permitir o posicionamento do botão à direita */
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* Botão "Meu Currículo!" */
+header nav .btn-curriculo {
+    position: relative; /* Posiciona o botão no canto direito */
+    right: 0; /* Coloca o botão no canto direito */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    padding: 10px 15px;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #081b29;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* Efeito ao passar o mouse */
+header nav .btn-curriculo:hover {
+    color: #00abf0;
+}
+
+/* Efeito visual com pseudo-elemento */
+header nav .btn-curriculo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+header nav .btn-curriculo:hover::before {
+    width: 100%;
+}
+
+
+section {
+    padding: 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    backdrop-filter: blur(10px) brightness(0.9);
+    background: linear-gradient(135deg, rgba(243, 232, 232, 0.8), rgba(255, 255, 255, 0.5));
+    border-radius: 20px; 
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.1), 
+        0 1px 20px rgba(0, 0, 0, 0.2), 
+        inset 0 1px 1px rgba(255, 255, 255, 0.6); 
+    border: 1px solid rgba(255, 255, 255, 0.4); 
+    position: relative; 
+    overflow: hidden; 
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.3), transparent 60%);
+    animation: move 10s infinite alternate;
+    opacity: 0.2;
+    pointer-events: none; 
+}
+
+@keyframes move {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(10px, 10px);
+    }
+}
+
+.hero {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 20px;
+}
+
+.hero-content {
+    flex: 1; 
+}
+
+.hero-image {
+    flex: 1; 
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.hero-image img {
+    max-width: 100%; 
+    height: auto; 
+    max-height: 300px; 
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skills div {
+    flex: 1 1 calc(33.333% - 1rem);
+    background: rgba(244, 244, 244, 0.9);
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skills div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.projects article {
+    flex: 1 1 calc(50% - 1rem);
+    background: rgba(244, 244, 244, 0.9);
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.contact-form button {
+    padding: 0.7rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.carousel-button.prev {
+    left: 0;
+}
+
+.carousel-button.next {
+    right: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 123, 255, 0.8);
+    color: white;
+    backdrop-filter: blur(5px);
+    border-top: 2px solid #007bff;
+}

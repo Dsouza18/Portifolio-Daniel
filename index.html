@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Santos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="script.js"></script>
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre Mim</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#skills">Skills</a>
+            <a href="#contato">Contato</a>
+            <a href="assets/CURRICULO - DANIEL SANTOS DE SOUZA.pdf" download="Curriculo.pdf" class="btn-curriculo">Meu Currículo!</a>
+        </nav>
+    </header>
+    
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Bem-vindo!</h1>
+            <p>Conheça mais sobre mim e meus projetos.</p>
+        </div>
+        <div class="hero-image">
+            <img src="./imagens/Daniel 3.png" alt="Imagem de apresentação">
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>Graduado em Análise e Desenvolvimento de Sistemas pela Universidade Católica de 
+            Salvador (UCSAL). Possuo sólida experiência em 
+            análise de dados, elaboração de relatórios financeiros e gerenciais no Power BI, controle 
+            de documentos e atendimento ao cliente. Atuei como voluntário no desenvolvimento de 
+            aplicativos mobile, monitor em Lógica de Programação e participante de maratonas de 
+            programação. Proativo, comunicativo e dedicado, busco oportunidades que aliem 
+            tecnologia e inovação</p>
+    </section>
+
+    <section id="projetos" class="projects">
+        <h2>Projetos Criados</h2>
+        
+        <!-- Carrossel -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-item">
+                    <h3>StoreComputer</h3>
+                    <img src="./imagens/StoreComputers.png" width="500">
+                    <p>Pojeto de e-commerce desenvolvido em Angular</p>
+                    <p>Link do repositório: <a href="https://github.com/Dsouza18/StoreComputers" target="_blank">https://github.com/Dsouza18/StoreComputers</a></p>
+                </div>
+                <div class="carousel-item">
+                    <h3>Middleware para movimentação de dados de segurados</h3>
+                    <p>Descrição do projeto 2.</p>
+                </div>
+                <div class="carousel-item">
+                    <h3>Sistama de Controle Administrativo</h3>
+                    <p>Descrição do projeto 3.</p>
+                </div>
+            </div>
+            
+            <!-- Botões de navegação -->
+            <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+    
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div><i class='bx bxl-html5' style="color: #e34c26; font-size: 2rem;"></i> HTML</div>
+            <div><i class='bx bxl-css3' style="color: #264de4; font-size: 2rem;"></i> CSS</div>
+            <div><i class='bx bxl-javascript' style="color: #f0db4f; font-size: 2rem;"></i> JavaScript</div>
+            <div><i class='bx bxl-angular' style="color: #dd0031; font-size: 2rem;"></i> Angular</div>
+            <div><i class='bx bxl-microsoft' style="color: #5e5e5e; font-size: 2rem;"></i> ASP.NET</div>
+            <div><i class='bx bxl-php' style="color: #777bb4; font-size: 2rem;"></i> PHP</div>
+        </div>
+    </section>
+    
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <form class="contact-form" id="contact-form">
+            <input type="text" id="name" name="name" placeholder="Seu nome" required>
+            <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+            <textarea rows="5" id="message" name="message" placeholder="Sua mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Daniel Santos. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
